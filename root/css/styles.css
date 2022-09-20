@@ -2,42 +2,56 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+html {
+    --purple: #471f3a;
+    --yellow: #fec900;
+    --gap: 1;
 }
 
 ::selection {
     color: #000;
-    background-color: #fec900;
+    background-color: var(--yellow);
 }
 
 body {
-    background-color: #471f3a;
+    background-color: var(--purple);
     font-family: "Roboto", sans-serif;
     color: #fff;
-    margin: auto;
-    display: block;
-    width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.font-silkscreen {
+    font-family: "Silkscreen", sans-serif;
 }
 
 .header {
     position: fixed;
     top: 0;
+    height: 80px;
+    padding: 0 30px;
     width: 100%;
-    background-color: #471f3a;
+    background-color: var(--purple);
     display: flex;
     flex-wrap: no-wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .header-logo {
-    width: 100px;
+    width: 30%;
 }
 
 .logo {
-    width: auto;
-    height: 10vh;
-    margin: 0 10px;
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+    max-width: 200px;
 }
 
 .header-nav {
@@ -45,49 +59,43 @@ body {
 }
 
 .header-menu {
-    position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    margin: 0 20px;
-    align-self: center;
+    justify-content: end;
     font-weight: 400;
-    font-family: 'Silkscreen', cursive;
-}
-
-#main {
-    padding-top: 10vh;
 }
 
 .menu {
-    position: relative;
     display: flex;
     align-items: center;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     list-style-type: none;
+    justify-content: space-between;
 }
 
 nav li {
-    margin: 10px;
+    margin: 0 10px;
 }
 
-.menu-item > a {
+.menu-item>a {
     text-decoration: none;
     color: inherit;
+    box-shadow: inset 0 0 0 0 var(--yellow);
+    transition: color 0.3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
-.menu-item > a:hover {
-    color: #fec900;
+.menu-item>a:hover {
+    color: var(--purple);
+    box-shadow: inset 250px 0 0 0 var(--yellow);
+}
+
+#main {
+    margin-top: 80px;
 }
 
 .hero {
-    height: 100%;
+    height: auto;
     width: auto;
+    /* max-height: 80vh; */
 }
 
 .background-main {
@@ -106,34 +114,33 @@ nav li {
 }
 
 .slogan {
-    padding: 20px;
+    padding: 10px 10px;
     text-align: center;
-    font-family: 'Silkscreen', cursive;
-    font-size: 36px;
+    font-size: clamp(1.5rem, 0.5rem + 3vw, 5rem);
     font-weight: 600;
 }
 
-.video {
-    text-align: center;
+video {
+    object-fit: cover;
+    max-height: 75vh;
 }
 
 .section-style {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 10%;
+    padding: 50px 10% 0 10%;
     /* margin: 0 45px; */
 }
 
-.section-style > div {
-    width: 30vw;
+.section-style>div {
+    width: 100%;
     height: auto;
-    margin: 0 30px;
+    margin: 0.85rem 30px;
 }
 
 .section-style .title {
     text-align: center;
-    font-family: 'Silkscreen', cursive;
     font-size: 2vw;
     padding: 35px;
     /* margin: 0 10%; */
@@ -143,20 +150,25 @@ nav li {
 
 .section-style .text {
     text-align: center;
-    font-size: 0.9vw;
+    font-size: 1.25rem;
 }
 
-.quem-somos .title {
-    color: #471f3a;
-    background-color: #fec900;
+.about-us .title {
+    color: var(--purple);
+    background-color: var(--yellow);
 }
 
-.nossas-cervejas {
-    background-color: #471f3a;
+.our-beers .title {
+    color: var(--purple);
+    background-color: var(--yellow);
+}
+
+.our-beers {
+    background-color: var(--purple);
     color: #fff;
 }
 
-.beer-cans > img {
+.beer-cans>img {
     width: 30vw;
     height: auto;
     border-radius: 5%;
@@ -166,8 +178,49 @@ footer {
     font-size: 12px;
     padding: 10px;
     text-align: center;
+    margin-top: auto;
     display: block;
     box-sizing: border-box;
     background-color: #000;
     color: #fff;
+}
+
+.grid-container-beers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+    margin: 1rem auto;
+    gap: 1rem;
+}
+
+.beer-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+}
+
+@media (max-width: 1000px) {
+    .section-style {
+        flex-direction: column;
+    }
+
+    .our-beers {
+        flex-direction: column-reverse;
+    }
+
+    .section-style .title {
+        font-size: 1.25rem;
+    }
+
+    .grid-container-beers {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 1rem;
+    }
+
+    .menu-item>a:hover {
+        color: var(--yellow);
+        box-shadow: inset 0 0 0 0 var(--yellow);
+    }
+
+ 
 }
