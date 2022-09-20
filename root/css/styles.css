@@ -78,18 +78,18 @@ nav li {
 
 .menu-item>a {
     text-decoration: none;
-    color: inherit;
+    color: white;
     box-shadow: inset 0 0 0 0 var(--yellow);
-    transition: color 0.3s ease-in-out, box-shadow .3s ease-in-out;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
 .menu-item>a:hover {
-    color: var(--purple);
     box-shadow: inset 250px 0 0 0 var(--yellow);
+    color: var(--purple);
 }
 
 #main {
-    margin-top: 80px;
+    margin-top: 120px;
 }
 
 .hero {
@@ -174,6 +174,11 @@ video {
     border-radius: 5%;
 }
 
+.bg-purple {
+    background-color: var(--purple);
+    color: white;
+}
+
 footer {
     font-size: 12px;
     padding: 10px;
@@ -192,6 +197,7 @@ footer {
     margin: 1rem auto;
     gap: 1rem;
 }
+
 
 .beer-card img {
     width: 100%;
@@ -221,6 +227,4 @@ footer {
         color: var(--yellow);
         box-shadow: inset 0 0 0 0 var(--yellow);
     }
-
- 
 }
