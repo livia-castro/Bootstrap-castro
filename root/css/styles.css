@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    color: #000;
+    background-color: #fec900;
+}
+
+body {
+    background-color: #471f3a;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    margin: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #471f3a;
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logo {
+    width: 100px;
+}
+
+.logo {
+    width: auto;
+    height: 10vh;
+    margin: 0 10px;
+}
+
+.header-nav {
+    width: 70%;
+}
+
+.header-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 20px;
+    align-self: center;
+    font-weight: 400;
+    font-family: 'Silkscreen', cursive;
+}
+
+#main {
+    padding-top: 10vh;
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+nav li {
+    margin: 10px;
+}
+
+.menu-item > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-item > a:hover {
+    color: #fec900;
+}
+
+.hero {
+    height: 100%;
+    width: auto;
+}
+
+.background-main {
+    background-image: url("https://media-exp1.licdn.com/dms/image/C4E16AQFquoDiQ1RwQw/profile-displaybackgroundimage-shrink_350_1400/0/1646535744502?e=1666224000&v=beta&t=SIyvUg0jB_kuaXV7NO9JF5u-fdtO7ukoFpcVoH5frQs");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 35%;
+    height: 100%;
+    width: auto;
+}
+
+.card-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: auto;
+}
+
+.slogan {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Silkscreen', cursive;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.video {
+    text-align: center;
+}
+
+.section-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10%;
+    /* margin: 0 45px; */
+}
+
+.section-style > div {
+    width: 30vw;
+    height: auto;
+    margin: 0 30px;
+}
+
+.section-style .title {
+    text-align: center;
+    font-family: 'Silkscreen', cursive;
+    font-size: 2vw;
+    padding: 35px;
+    /* margin: 0 10%; */
+    border-radius: 10px;
+    display: block;
+}
+
+.section-style .text {
+    text-align: center;
+    font-size: 0.9vw;
+}
+
+.quem-somos .title {
+    color: #471f3a;
+    background-color: #fec900;
+}
+
+.nossas-cervejas {
+    background-color: #471f3a;
+    color: #fff;
+}
+
+.beer-cans > img {
+    width: 30vw;
+    height: auto;
+    border-radius: 5%;
+}
+
+footer {
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #fff;
+}
