@@ -78,14 +78,14 @@ nav li {
 
 .menu-item>a {
     text-decoration: none;
-    color: white!important;
+    color: white;
     box-shadow: inset 0 0 0 0 var(--yellow);
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
 .menu-item>a:hover {
     box-shadow: inset 250px 0 0 0 var(--yellow);
-    color: var(--purple)!important;
+    color: var(--purple);
 }
 
 #main {
@@ -224,7 +224,7 @@ footer {
     }
 
     .menu-item>a:hover {
-        color: var(--yellow)!important;
+        color: var(--yellow);
         box-shadow: inset 0 0 0 0 var(--yellow);
     }
 }
